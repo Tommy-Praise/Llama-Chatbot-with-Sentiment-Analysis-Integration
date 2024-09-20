@@ -1,91 +1,53 @@
-# Llama-Chatbot-with-Sentiment-Analysis-Integration
-This project implements an AI assistant chatbot using the Llama 2 model from Hugging Face, enhanced with sentiment analysis to modify its responses based on the user's emotional tone. The chatbot dynamically responds to user queries by checking a predefined QA dataset or generating answers using the Llama 2 model, while adjusting its responses based on sentiment.
+# Llama-Chatbot-with-Sentiment-Analysis-Integration 🚀
 
-**Features**
+Hey there! 👋 Welcome to the Llama 2 Chatbot with Sentiment Analysis project. This chatbot doesn’t just respond to your questions — it understands you. It taps into sentiment analysis to read between the lines and adjust its tone based on how you’re feeling. Whether you’re calm, curious, or a bit frustrated, this bot’s got you covered with dynamic responses.
 
-**Sentiment Analysis**: The chatbot analyzes user sentiment (positive, negative, neutral) and adjusts its responses accordingly.
+**Why I Built This**
 
-**Llama 2 for Text Generation:** Uses the Llama 2 model from Hugging Face to generate intelligent and context-aware responses.
+The challenge was to go beyond basic chatbot functionality. I wanted to build a more intuitive and responsive AI assistant, capable of adjusting its tone based on the user’s sentiment. And guess what? It’s powered by Llama 2 from Hugging Face, and comes with a Gradio interface to make interacting with it super smooth.
 
-**Dynamic Learning:** If a question is not found in the predefined QA dataset, the chatbot generates an answer and stores it in the dataset for future use.
+**Features 🌟**
 
-**Gradio Interface:** A simple and intuitive web interface for interacting with the chatbot.
+Sentiment-Aware Responses: The chatbot adapts its replies based on your emotions, making interactions feel more natural and human-like.
+QA Dataset Integration: It checks an existing dataset for known questions and answers before generating a response.
 
+Llama 2 Model: If the answer isn’t in the dataset, it turns to the Llama 2 model for a fresh response.
+Customizable Responses: Future-proofed with custom prompt engineering and dynamic response generation based on context and mood.
 
-**Tech Stack**
+**How It Works 💡**
 
-**Hugging Face Transformers:** For Llama 2 model and sentiment analysis pipeline.
+**Sentiment Analysis:** I’ve integrated a sentiment analysis model from Hugging Face. This allows the chatbot to gauge how you're feeling and adjust its responses. Feeling frustrated? It might take a more supportive tone. Calm? The response stays neutral.
 
-**Pandas:** For managing the QA dataset.
+**LLM for Question-Answering:** The chatbot first checks a pre-loaded dataset for known answers. If the answer isn’t there, it uses the Llama 2 model to generate one on the fly.
 
-**Gradio:** For building the user interface.
+**Dynamic Gradio UI:** The Gradio interface is clean and simple, making it easy to interact with the chatbot. Ask away!
 
-**Google Colab:** Recommended platform for running this project.
+**Setup 🔧**
 
+Ready to test it out? Here's how you can get started:
 
-**Installation**
-To get started, install the required libraries:
+- **Clone the repo:** git clone <https://github.com/Tommy-Praise/Llama-Chatbot-with-Sentiment-Analysis-Integration>
 
+- **Install the dependencies:** pip install -r requirements.txt
 
-pip install -q accelerate protobuf sentencepiece torch git+https://github.com/huggingface/transformers huggingface_hub
-pip install -q gradio
+- **Run the chatbot**: python app.py (or open it up in Colab)
 
+Next Steps
 
-**Running the Chatbot**
+This is just the beginning! The future roadmap includes:
 
-Authenticate with Hugging Face:
+- Fine-tuning the AI for an even more specialized assistant role.
 
-You will need a Hugging Face access token to load the Llama 2 model. You can add your token to the login() function in the code.
+- Expanding the chatbot’s context memory so it can handle longer, multi-turn conversations.
 
+- Improving response accuracy and sentiment detection.
 
-**Run the Chatbot:**
-The chatbot will load a QA dataset (or create one if it doesn't exist) and launch the Gradio interface where you can interact with it.
-
-
-**Sentiment-Driven Responses:**
-As you ask questions, the chatbot will detect your sentiment (positive, negative, neutral) and adjust its responses to match the tone.
-
-
-Example Usage
-Positive Sentiment:
-
-User: "What is the name of Julius Magellan's dog?"
-Chatbot: "The name of Julius Magellan's dog is Sparky"
-Negative Sentiment:
-
-**User:** "Why do I always forget names?"
-
-**Chatbot:** "I'm sorry you're feeling that way. Julius Magellan's dog is called Sparky"
+- Tweaking the Gradio UI to make it more interactive.
 
 
-**How It Works**
+**Let’s Chat 💬**
 
-Sentiment Analysis:
-
-The user's input is passed through a sentiment analysis pipeline to classify it as positive, negative, or neutral.
+Feel free to test it out and reach out with feedback! You can drop any suggestions, issues, or ideas in the Issues tab or just hit me up.
 
 
-**Answer Generation:**
-
-If the question exists in the QA dataset, the chatbot retrieves and responds with the stored answer.
-If not, the Llama 2 model generates an answer, which is stored in the QA dataset for future use.
-
-**Response Adjustment:**
-The response is modified based on the detected sentiment. For example, positive sentiments may lead to cheerful responses, while negative sentiments will trigger empathetic responses.
-
-
-**Future Enhancements**
-
-**Fine-tuning:** Improving the Llama 2 model to suit assistant-like conversations better.
-
-**Extended Context Memory:** Allowing the chatbot to retain longer conversation histories for improved contextual understanding.
-
-**Custom Prompt Engineering: ** Improving prompt quality for better task-specific responses.
-
-**Advanced Gradio UI:** A more dynamic and user-friendly interface with conversation-style options and real-time sentiment visualizations.
-
-
-**License**
-
-This project is open-source and licensed under the MIT License.
-
+Happy chatting!
